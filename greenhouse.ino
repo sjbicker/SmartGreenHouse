@@ -38,13 +38,10 @@
 
 //Define Global Vars
 #define DHTTYPE DHT11
-#define DHTPIN 0
+#define DHTPIN 1
 #define LEDConfirmWifi 4
 #define ActivityLED 5
-#define PumpPort0 3
-//#define PumpPort1 2
-#define PumpPort2 1
-#define PumpPort3 7
+
 #define DS18B20_PIN 2
 
 //Set DHT and DS18B20 pins and configs
@@ -107,7 +104,7 @@ void loop() {
   }
 
   //Get Light level data
-  light = analogRead(A6);
+  light = analogRead(A5);
 
   //Get Soil Data
   soilMoisture0 = SoilSaturationP(analogRead(A0));
